@@ -41,7 +41,19 @@ r3.color("yellow")
 r3.goto(-120,10)
 r3.down()
 #Add the fans
-
+goto = -120
+number = random.randint(1,10)
+for i in range(number):
+    rf = random.randint(0,255)
+    gf = random.randint(0,255)
+    bf = random.randint(0,255)
+    goto = goto + 30
+    fan = turtle.Turtle()
+    fan.shape("turtle")
+    fan.up()
+    fan.color(rf, gf, bf)
+    fan.goto(goto,-120)
+    fan.left(90)
 #guessing
 win = input ("Which turtle will win:")
 text = turtle.Turtle()
